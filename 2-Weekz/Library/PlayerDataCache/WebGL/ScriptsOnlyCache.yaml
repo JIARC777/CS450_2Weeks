@@ -1,11 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Bullet
     - CameraController
+    - ForceField
     - GameManager
+    - GameUI
     - Menu
     - NetworkManager
+    - Pickup
     - PlayerController
+    - PlayerWeapon
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
@@ -35,6 +42,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/Game.unity:
@@ -63,14 +71,48 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12230}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 13880}
+      Script: {instanceID: 11998}
+    - Class: 114
+      Script: {instanceID: 12228}
+    - Class: 114
+      Script: {instanceID: 12478}
+    - Class: 114
+      Script: {instanceID: 12566}
+    - Class: 114
+      Script: {instanceID: 12808}
+    - Class: 114
+      Script: {instanceID: 13238}
+    - Class: 114
+      Script: {instanceID: 13348}
+    - Class: 114
+      Script: {instanceID: 13480}
+    - Class: 114
+      Script: {instanceID: 13550}
+    - Class: 114
+      Script: {instanceID: 13886}
+    - Class: 114
+      Script: {instanceID: 13966}
+    - Class: 114
+      Script: {instanceID: 14002}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -97,6 +139,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -104,56 +148,62 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 11760}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 11872}
+      Script: {instanceID: 11870}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 11958}
     - Class: 114
-      Script: {instanceID: 12000}
+      Script: {instanceID: 11998}
     - Class: 114
-      Script: {instanceID: 12014}
+      Script: {instanceID: 12012}
     - Class: 114
-      Script: {instanceID: 12026}
+      Script: {instanceID: 12024}
     - Class: 114
-      Script: {instanceID: 12144}
+      Script: {instanceID: 12142}
     - Class: 114
-      Script: {instanceID: 12252}
+      Script: {instanceID: 12250}
+    - Class: 114
+      Script: {instanceID: 12340}
     - Class: 114
       Script: {instanceID: 12478}
     - Class: 114
       Script: {instanceID: 12510}
     - Class: 114
-      Script: {instanceID: 12714}
+      Script: {instanceID: 12716}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 12838}
+      Script: {instanceID: 12842}
     - Class: 114
-      Script: {instanceID: 13032}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13088}
+      Script: {instanceID: 13090}
     - Class: 114
-      Script: {instanceID: 13230}
+      Script: {instanceID: 13168}
     - Class: 114
       Script: {instanceID: 13234}
     - Class: 114
-      Script: {instanceID: 13250}
+      Script: {instanceID: 13238}
     - Class: 114
-      Script: {instanceID: 13472}
+      Script: {instanceID: 13254}
     - Class: 114
-      Script: {instanceID: 13542}
+      Script: {instanceID: 13480}
     - Class: 114
-      Script: {instanceID: 13724}
+      Script: {instanceID: 13550}
     - Class: 114
-      Script: {instanceID: 13740}
+      Script: {instanceID: 13732}
     - Class: 114
-      Script: {instanceID: 13880}
+      Script: {instanceID: 13748}
     - Class: 114
-      Script: {instanceID: 13960}
+      Script: {instanceID: 13886}
+    - Class: 114
+      Script: {instanceID: 13966}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -356,12 +406,6 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: cd0ecdca0166232906c6f2df9dddc3d3
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: Photon.Pun
-    className: PhotonEditor
-  - hash:
-      serializedVersion: 2
       Hash: 11df54cb47bd74c537f3c732a94ea97d
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
@@ -380,7 +424,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 7fedd5186771575031038b4631413771
+      Hash: 301e869952b4c12a7399aa99ef27c7a6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -408,6 +452,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 09672d516e96f22c402cc4f6974114c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerWeapon
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -458,12 +508,6 @@ ScriptsOnlyBuild:
     className: ConnectAndJoinRandom
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: Photon.Pun
-    className: PhotonViewInspector
-  - hash:
-      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -494,6 +538,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 94b2f6224f8b1f503559c9f94e20b7d2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pickup
+  - hash:
+      serializedVersion: 2
       Hash: 57d2b3ca58a430f7cf319bb757c1f0f5
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -506,13 +556,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: cd0ecdca0166232906c6f2df9dddc3d3
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: Photon.Pun
-    className: PhotonViewHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 68acd414a4a457861f3e4f670233f1f3
+      Hash: b82d1052e2b9d6c9c5236774ec43fc02
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -536,28 +580,22 @@ ScriptsOnlyBuild:
     className: PhotonRigidbodyView
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: Photon.Pun
-    className: PhotonTransformViewEditor
-  - hash:
-      serializedVersion: 2
       Hash: 11df54cb47bd74c537f3c732a94ea97d
     assemblyName: PhotonRealtime.dll
     namespaceName: Photon.Realtime
     className: ConnectionHandler
   - hash:
       serializedVersion: 2
+      Hash: ad59c152d26a498351b219616b9f4230
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameUI
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: 
-    className: ServerSettingsInspector
   - hash:
       serializedVersion: 2
       Hash: 259988b2d867e1586634d64379c5ff81
@@ -584,22 +622,10 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: Photon.Pun
-    className: PhotonTransformViewClassicEditor
-  - hash:
-      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: Photon.Pun
-    className: PhotonRigidbody2DViewEditor
   - hash:
       serializedVersion: 2
       Hash: 23d98efc145b1081fdecd8f309db521f
@@ -620,10 +646,10 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: Photon.Pun
-    className: PhotonRigidbodyViewEditor
+      Hash: 54f54134a393f914347488c53cdfbacd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bullet
   - hash:
       serializedVersion: 2
       Hash: 4ce15e99c635d2567873d27549d1f16f
@@ -686,16 +712,10 @@ ScriptsOnlyBuild:
     className: PunTurnManager
   - hash:
       serializedVersion: 2
-      Hash: cb2afabfc5246c78c45126a8a3100687
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: Photon.Pun
-    className: PunSceneSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: Photon.Pun
-    className: PunSceneSettingsInspector
+      Hash: f14df5e1c0f68caabd577304b7cb808a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ForceField
   - hash:
       serializedVersion: 2
       Hash: 7829e932aec962afd9bcfad28ffff27d
@@ -768,12 +788,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: PhotonUnityNetworking.Editor.dll
-    namespaceName: Photon.Pun
-    className: PhotonAnimatorViewEditor
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
@@ -916,4 +930,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/jivan/OneDrive/Documents/GitHub/CS450_2Weeks/2-Weekz/WebGL_Build
+  playerPath: C:/Users/jivan/OneDrive/Documents/GitHub/CS450_2Weeks/2-Weekz/WebGL
